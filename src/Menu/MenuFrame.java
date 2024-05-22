@@ -4,10 +4,11 @@ import Constants.Constants;
 
 import javax.swing.*;
 
-
 public class MenuFrame extends JFrame  {
 
-    public MenuFrame() {
+    private static MenuFrame instance = null;
+
+    private MenuFrame() {
         this.add(new MenuPanel(this));
         this.setTitle("Menu");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -15,5 +16,13 @@ public class MenuFrame extends JFrame  {
         this.setResizable(false);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+    }
+
+    // PATRON DE DISEÑO SINGLENTON
+    public static MenuFrame getInstance() {
+        if (instance == null) {
+            instance = new MenuFrame();
+        }
+        return instance;
     }
 }

@@ -13,13 +13,22 @@ public class FileWriterProxy implements FileWriterInterface {
     }
 
     public boolean WriteFile(Quest q) {
-        // Aquí puedes controlar el acceso al RealFileWriter
-        // Por ejemplo, podrías agregar lógica para verificar si q es null
-        // antes de delegar la llamada al RealFileWriter
-        return realFileWriter.writeFile(q);
+        if (q == null) {
+            throw new IllegalArgumentException("Quest cannot be null");
+        }
+
+        return realFileWriter.WriteFile(q);
     }
 
     public ArrayList<Quest> ReadFile() {
         return realFileWriter.ReadFile();
     }
+
+    public void addWord(String word, String hint) {
+        realFileWriter.addWord(word, hint);
+    }
+
+    public void removeWord(String word){
+        realFileWriter.removeWord(word);
+    }   
 }

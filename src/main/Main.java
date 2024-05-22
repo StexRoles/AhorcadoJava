@@ -16,8 +16,8 @@ import Constants.Constants;
 
 public class Main {
     public static void main(String[] args) {
-        // open the menu
-        new MenuFrame();
+        // open the menu only one instance
+        MenuFrame.getInstance();
 
         // plays the background music
         playBackgroundSong(Constants.SONG_PATH);
