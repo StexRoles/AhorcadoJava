@@ -1,0 +1,18 @@
+matias; artista
+neymar; jugador
+torta; postre dulce
+aguacate; fruta
+ronaldo; fenómeno
+estrelicia; flor
+sergio; nombre de una persona
+millonarios; equipo de fútbol
+tornado; fenómeno natural
+sofía; nombre de persona
+médico; ocupación
+helado; postre dulce
+manzana; fruta
+la pulga; apodo
+rosa; flor
+ana; nombre de persona
+boca juniors; equipo de fútbol
+huracán	fenómeno natural
